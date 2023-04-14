@@ -9,3 +9,14 @@ In Magento 2.4.x, some merchants have trouble with two-factor authentications an
 * Provides facility to bypass 2FA for the third-party integrations that use the default Magento’s API for token generation such as Ship Station etc.
 * Provides the facility to generate the Admin Token without needing to go through tired process of 2FA.
 * Helps the merchant to keep using the integrations and make it compatible withMagento’s 2.4.x.
+
+## Installation
+Install the module as a composer requirement for environments:
+
+```
+    composer require devhub/bypass-two-factorauth
+    php bin/magento module:enable DeveloperHub_Bypass2FA
+    php bin/magento setup:upgrade
+    php bin/magento setup:di:compile
+    php bin/magento setup:static-content:deploy
+```
